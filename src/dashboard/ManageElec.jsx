@@ -15,7 +15,7 @@ function ManageElec() {
 
   // get all data
   const handleElectronics = () => {
-   axios.get("http://localhost:7000/electronic/").then((response) => {
+   axios.get("https://kafoon.onrender.com/electronic/").then((response) => {
      setElectronics(response.data)
    }).catch((error) => console.log(error))
   }

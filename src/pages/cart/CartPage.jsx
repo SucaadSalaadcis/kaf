@@ -25,7 +25,7 @@ function CartPage() {
     const handleIncrease = (item) => {
         // console.log(item)
         // console.log(item._id)
-        fetch(`http://localhost:7000/carts/${item._id}`, {
+        fetch(`https://kafoon.onrender.com/carts/${item._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -51,7 +51,7 @@ function CartPage() {
     const handleDecrease = (item) => {
 
         if (item.quantity > 1) {
-            fetch(`http://localhost:7000/carts/${item._id}`, {
+            fetch(`https://kafoon.onrender.com/carts/${item._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -108,7 +108,7 @@ function CartPage() {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`http://localhost:7000/carts/${item._id}`).then(response => {
+                axios.delete(`https://kafoon.onrender.com/carts/${item._id}`).then(response => {
                     if (response) {
                         refetch();
                         Swal.fire("Deleted!", "Your file has been deleted.", "success");

@@ -75,7 +75,7 @@ const router = createBrowserRouter([
       {
         path: "/dakashfbon/edit/:id",
         element: <EditElec />,
-        loader: ({ params }) => fetch(`http://localhost:7000/electronic/${params.id}`)
+        loader: ({ params }) => fetch(`https://kafoon.onrender.com/electronic/${params.id}`)
       },
 
     ]

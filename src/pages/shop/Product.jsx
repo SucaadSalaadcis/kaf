@@ -26,7 +26,7 @@ function Product({product}){
     if (user && user.email) {
       const cartItem = { menuItemId: _id, name, quantity: 1, ImageURL, price,category, email: user.email }
       //  console.log(cartItem)
-      fetch("http://localhost:7000/carts", {
+      fetch("https://kafoon.onrender.com/carts", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'

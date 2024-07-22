@@ -23,7 +23,7 @@ function EditElec() {
 
      // get single data
      const handleGetSingleData = () => {
-      axios.get(`http://localhost:7000/electronic/${param.id}`).then((response)=> {
+      axios.get(`https://kafoon.onrender.com/electronic/${param.id}`).then((response)=> {
           setImageURL(response.data[0].ImageURL);
           setName(response.data[0].name);
           setCategory(response.data[0].category);
@@ -49,7 +49,7 @@ function EditElec() {
       price,
     }
     // console.log(data)
-    axios.put(`http://localhost:7000/electronic/${param.id}`, data).then(() => {
+    axios.put(`https://kafoon.onrender.com/electronic/${param.id}`, data).then(() => {
       console.log(data)
       if (data) {
         toast("Updated Successfuly...", {

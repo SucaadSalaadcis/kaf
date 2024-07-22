@@ -39,7 +39,7 @@ function Proceed() {
       PhonePaid,
       amountPaid,
     }
-    axios.post("http://localhost:7000/onlinePayment/", data).then(() => {
+    axios.post("https://kafoon.onrender.com/onlinePayment/", data).then(() => {
 
       toast("Paid Successfuly 😎...", {
         position: "top-right",

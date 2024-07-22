@@ -51,7 +51,7 @@ const AuthProvider = ({ children }) => {
           email: currentUser.email
         };
         // generating token
-        axios.post('http://localhost:7000/jwt', userInfo).then((res) => {
+        axios.post('https://kafoon.onrender.com/jwt', userInfo).then((res) => {
           // console.log(res.data.token); // token
           // userkasta sogalo website ka token lo generate gareyna
           if (res.data.token) {

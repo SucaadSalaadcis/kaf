@@ -35,7 +35,7 @@ function UploadElec() {
     console.log(ElectronicObj);
 
     // send data to the database
-    fetch("http://localhost:7000/electronic", {
+    fetch("https://kafoon.onrender.com/electronic", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -34,7 +34,7 @@ function SignUp() {
                 name:data.name,
                 email:data.email
                }
-               axios.post('http://localhost:7000/users/', userInfo).then((res) => {
+               axios.post('https://kafoon.onrender.com/users/', userInfo).then((res) => {
                 // alert("account creation  Successfully done!")
                 navigate(from,{replace: true})
                 
@@ -64,7 +64,7 @@ function SignUp() {
                  name: result?.user?.displayName,
                  email: result?.user?.email
                 }
-                axios.post('http://localhost:7000/users/', userInfo).then((res) => {
+                axios.post('https://kafoon.onrender.com/users/', userInfo).then((res) => {
                  alert("Sign in successfully..")
                  navigate('/')
                  

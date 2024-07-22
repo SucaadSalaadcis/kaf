@@ -9,7 +9,7 @@ function Users() {
   const { refetch, data: users = [] } = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-      const res = await axios.get('http://localhost:7000/users/')
+      const res = await axios.get('https://kafoon.onrender.com/users/')
       // console.log(res.url); 
       return res.data;
     },
@@ -20,7 +20,7 @@ function Users() {
   
 
   const hangleDeleteUser =  (user) => {
-     axios.delete(`http://localhost:7000/users/${user._id}`).then(res => {
+     axios.delete(`https://kafoon.onrender.com/users/${user._id}`).then(res => {
       alert(`${user.name} is removed from database`)
        refetch();
      }).catch(err => console.log(err)) 

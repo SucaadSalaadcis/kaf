@@ -10,7 +10,7 @@ function Orders() {
   const { refetch, data: users = [] } = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-      const res = await axios.get('http://localhost:7000/orders/')
+      const res = await axios.get('https://kafoon.onrender.com/orders/')
       // console.log(res.url); 
       return res.data;
     },
