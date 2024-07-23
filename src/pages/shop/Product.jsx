@@ -53,21 +53,22 @@ function Product({product}){
           });
         }
       })
-    }else {
-      Swal.fire({
-        title: "Please Login",
-        text: "Without an account can't able to add products",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Signup Now!"
-      }).then((result) => {
-        if (result.isConfirmed) {
-          navigate('/signup',{state:{from:location}})
-        }
-      });
     }
+    // else {
+    //   Swal.fire({
+    //     title: "Please Login",
+    //     text: "Without an account can't able to add products",
+    //     icon: "warning",
+    //     showCancelButton: true,
+    //     confirmButtonColor: "#3085d6",
+    //     cancelButtonColor: "#d33",
+    //     confirmButtonText: "Signup Now!"
+    //   }).then((result) => {
+    //     if (result.isConfirmed) {
+    //       navigate('/signup',{state:{from:location}})
+    //     }
+    //   });
+    // }
 
   }
 
