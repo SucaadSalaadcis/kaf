@@ -38,7 +38,7 @@ function Product({product}){
           Swal.fire({
             position: "top-end",
             icon: "success",
-            title: "Food added on the cart",
+            title: "Item added on the cart",
             showConfirmButton: false,
             timer: 1500
           });
