@@ -13,11 +13,13 @@ function Product({product}){
    
   const location = useLocation();
   const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/"
  
 
   const { _id, name, ImageURL, category, price } = product
 
   const { user } = useContext(AuthContext)
+ 
 
   
   // add to cart
@@ -67,7 +69,14 @@ function Product({product}){
         if (result.isConfirmed) {
           navigate('/signup',{state:{from:location}})
         }
+        // toast("Login successfully...", {
+        //   position: "top-right",
+        //   autoClose: 1000,
+        // });
+        document.getElementById("my_modal_5").close();
+        navigate(from, { replace: true })
       });
+
     }
 
   }

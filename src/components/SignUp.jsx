@@ -58,6 +58,7 @@ function SignUp() {
     // login with google added
     const hangleRegister = () => {
         signUpWithGmail().then((result) => {
+            
             const user = result.user;
          
                 const userInfo = {
@@ -65,11 +66,11 @@ function SignUp() {
                  email: result?.user?.email
                 }
                 axios.post('https://kafoon.onrender.com/users/', userInfo).then((res) => {
-                 alert("Sign in successfully..")
-                 navigate('/')
-                 
-               });
-       
+                    navigate(from,{replace: true})
+                });
+                alert("Acount Creation Successfully done!")
+                document.getElementById("my_modal_5").close();
+                navigate(from, { replace: true })
 
         }).catch((error) => {
            console.log(error)

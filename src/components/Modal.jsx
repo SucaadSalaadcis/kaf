@@ -56,6 +56,8 @@ const Modal = () => {
     });
       navigate(from, { replace: true })
     }).catch((error) => console.log(error))
+
+    
   }
   return (
     <dialog id="my_modal_5" className="modal modal-middle sm:modal-middle">
