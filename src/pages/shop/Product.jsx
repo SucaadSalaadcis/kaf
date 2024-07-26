@@ -69,12 +69,6 @@ function Product({product}){
         if (result.isConfirmed) {
           navigate('/signup',{state:{from:location}})
         }
-        // toast("Login successfully...", {
-        //   position: "top-right",
-        //   autoClose: 1000,
-        // });
-        document.getElementById("my_modal_5").close();
-        navigate(from, { replace: true })
       });
 
     }
