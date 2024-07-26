@@ -143,7 +143,7 @@ function CartPage() {
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
-                        <thead className="bg-purple-500 text-white rounded-sm">
+                        <thead className="bg-purple-500 text-white rounded-sm text-center" >
                             <tr>
                                 <th>#</th>
                                 <th>ImageURL</th>
@@ -153,7 +153,7 @@ function CartPage() {
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className='text-center'>
                             {cart.map((item, index) => (
                                 <tr key={index}>
                                     <td>{index + 1}</td>
@@ -166,8 +166,8 @@ function CartPage() {
                                     </td>
                                     <td className="font-medium">{item.name}</td>
                                     <td>
-                                        <button className="btn btn-xs "  onClick={() => handleDecrease(item)}> <FiMinus/>  </button>
-                                        <input type="number" value={item.quantity} onChange={() => console.log(quantity)} className=' mt-5 text-center w-12 mx-2 overflow-hidden appearance-none border-none' />
+                                        <button className="btn btn-xs  "  onClick={() => handleDecrease(item)}> <FiMinus/>  </button>
+                                        <input type="number" value={item.quantity} onChange={() => console.log(quantity)} className=' text-center w-12 mx-2 overflow-hidden appearance-none border-none' />
                                         <button className="btn btn-xs " onClick={() => handleIncrease(item)}> <FaPlus/></button>
                                     </td>
                                     <td>${calculatePrice(item).toFixed(2)}</td>
